@@ -1,27 +1,54 @@
-#include <stdlib.h>
-#include <stdio.h>
+#include <iostream>
 
-
-// ./configure check all libs on system
-// make build the whole project
-// make install install the binary into /usr/local/share
-// using DESTDIR change the /usr/local to defined value
+void passing_by_ptr(char *some_ptr);
+void passing_by_value(char some_value);
+void passing_by_ref_mut(char &some_ref);
+void passing_by_ref_imut(const char &some_ref);
 
 
 int main() {
 
-    int num = 10;
+	char ch = 'a';
 
-    int &ref = num;
+	std::cout << ch << std::endl;
 
-    printf("%d \n", ref);
-    printf("%d \n", num);
+	passing_by_ptr(&ch);
 
-    printf("%p \n", &num);
-    printf("%p", &ref);
+	std::cout << ch << std::endl;
 
-    return 0;
+	passing_by_value(ch);
+
+	std::cout << ch << std::endl;
+
+	passing_by_ref_mut(ch);
+
+	std::cout << ch << std::endl;
+
+	passing_by_ref_imut(ch);
+
+	std::cout << ch << std::endl;
+
+	return 0;
 }
 
-// passando o valor por referencia minimizo a quantidade de bytes gerada na memoria
-// já que a menor unidade em memória é o byte
+void passing_by_ptr(char* some_ptr) {
+
+	*some_ptr = 'b';
+}
+
+void passing_by_value(char some_value) {
+
+	some_value = 'c';
+}
+
+void passing_by_ref_mut(char& some_ref) {
+
+	some_ref = 'd';
+}
+
+void passing_by_ref_imut(const char& some_ref) {
+
+	std::cout << some_ref << std::endl; 
+}
+
+// passando o valor por referencia minimizo a quantidade de bytes gerada na memoria.
