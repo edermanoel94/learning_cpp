@@ -23,5 +23,8 @@ int main() {
 	s.setColor(c);
 
 	std::cout << s.getColor().r << std::endl;
+
+    std::cout << s << std::endl;
+
 	return 0;
 }

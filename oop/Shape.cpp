@@ -18,6 +18,10 @@ Shape::Shape(const Shape& original) {
 
 Shape::~Shape() = default;
 
+double Shape::Area() {
+	return width * height;
+}
+
 double Shape::getHeight() { return height; }
 
 double Shape::getWidth() { return width; }
@@ -31,3 +35,9 @@ void Shape::setHeight(double y) { height = y; }
 void Shape::setColor(const color& color) { c = color; }
 
 color Shape::getColor() { return c; }
+
+// override operator const char* (toString)
+Shape::operator const char& () {
+
+    return "teste";
+}
