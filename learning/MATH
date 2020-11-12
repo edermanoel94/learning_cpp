@@ -1,0 +1,7 @@
+Modules (%) in programming make the length of number to be defined by the right module number.
+
+Example:
+
+int secretNumber = srand(time(NULL)) % 11;
+
+srand will generate a number less than eleven (11), than will be 10 number length.

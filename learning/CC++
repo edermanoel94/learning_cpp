@@ -1,0 +1,17 @@
+#####################################
+############# Compiler ##############
+#####################################
+
+GCC-> For C library
+G++-> For C++ library
+
+CMake -> is for C code with many libraries
+
+Args for compiler ->
+
+Build some GNU Projects
+
+./configure check all libs on system
+make build the whole project
+make install install the binary into /usr/local/share
+using DESTDIR change the /usr/local to defined value
